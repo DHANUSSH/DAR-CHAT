@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*top navigation*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    font-family: 'arial';
+    position: relative;
+    height: calc(100vh - 3rem);
+    width: 100%;
+    background: url('./MOUNTAIN\ IMG.jpeg') no-repeat top center / cover;
+    overflow: hidden;
+}
+
+.fab1{
+    width: 140px;
+    height: 25px;
+    background-color: #BBDEFB;
+    color: #0D47A1;
+    border-radius: 50px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bolder;
+  }
+.fab1:hover{
+    background-color: #0D47A1;
+    color: #BBDEFB;
+}
+
+
+.brand{
+    transform: translateX(10px);
+    font-size: 30px;
+    color: #FFF;
+}
+
+.nav-wrapper{
+    background-color: #008BFF;
+    font-weight: bolder;
+    display: flex;
+    box-shadow: 0px 0px 40px 0px rgba(0.8, 0.8, 0.8, 0.8);
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.nav-wrapper ul.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.nav-wrapper ul.nav-list li {
+    margin-left: 30px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.nav-wrapper ul.nav-list li a {
+    color: #FFF;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all .1s ease-in-out;
+}
+
+.nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list li.active a {
+    color: #0D47A1;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(20px); 
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.mobile .hamburger span {
+    background: #0D47A1;
+    width: 28px;
+    height: 2px;
+    margin-bottom: 8px;
+}
+
+.mobile ul.nav-list {
+    background-color: #008BFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .1s ease-in-out;
+}
+
+.hamburger, .brand {
+    z-index: 9999;
+}
+
+.mobile ul.nav-list.open {
+    opacity: 1;
+    pointer-events: auto;  
+}
+
+.mobile .hamburger span {
+    transform-origin: left;
+    transition: all .1s ease-in-out;
+}
+
+.mobile ul.nav-list li a {
+    font-size: 20px;
+}
+
+/*top navigation close here*/
+
+/*Scroll-Bar1*/
+  /* width */
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #FFF;
+  }
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #FFF;
+    border-radius: 50px;
+    border-color: #FFF;
+    border-style: solid;
+    width: 10px;
+  }
+ /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFF;
+    width: 10px;
+  }
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0D47A1;
+  }
+  /* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BBDEFB;
+    border-radius: 50px;
+    border-color: #FFF;
+    border-style: solid;
+  }
+
+/*close-Scroll-Bar1*/
+
+
+/*Scroll-Bar-button*/
+
+/* width */
+::-webkit-scrollbar-button {
+    width: 15px;
+    height: 25px;
+    background-color: #BBDEFB;
+    border-radius: 10px;
+    border-color: #FFF;
+    border-style: solid;
+  }
+::-webkit-scrollbar-button:hover{
+    background-color: #BBDEFB;
+    border-color: #FFF;
+}
+/*close-Scroll-Bar-button*/
+
+/*content*/
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul{
+    position: relative;
+}
+
+.dropdown-link > a{
+    display: flex;
+    background-color: #fff;
+    color: #3498db;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    background-color: #3498db;
+    color: #fff;
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+    border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+/*content*/
